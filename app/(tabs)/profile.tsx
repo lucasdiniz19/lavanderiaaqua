@@ -4,16 +4,16 @@ import { router } from 'expo-router';
 
 export default function ProfileScreen() {
     const [userData, setUserData] = useState({
-        name: 'João Silva',
-        email: 'joao.silva@email.com',
-        phone: '(11) 99999-9999',
+        name: 'João lucas trindade',
+        email: 'mg.lucasdiniz@gmail.com',
+        phone: '(61) 995401064',
         addresses: [
             { id: 1, street: 'Rua das Flores', number: '123', neighborhood: 'Centro' },
             { id: 2, street: 'Avenida Principal', number: '456', neighborhood: 'Jardim' },
         ],
         paymentMethods: [
             { id: 1, type: 'Cartão de Crédito', lastDigits: '**** **** **** 1234' },
-            { id: 2, type: 'PIX', key: 'joao.silva@email.com' },
+            { id: 2, type: 'PIX', key: 'mg.lucasdiniz@gmail.com' },
         ],
     });
 
