@@ -5,6 +5,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { ImageBackground, StyleSheet, View } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -29,11 +30,31 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
+      <ImageBackground
+        source={require('../assets/images/Captura.png')}
+        style={styles.background}
+        resizeMode="cover"
+      >
+        <View style={styles.container}>
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="+not-found" />
+          </Stack>
+          <StatusBar style="auto" />
+        </View>
+      </ImageBackground>
     </ThemeProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  background: {
+    flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  container: {
+    flex: 1,
+    backgroundColor: 'rgba(255, 255, 255, 0.9)', // Adiciona um overlay branco semi-transparente
+  },
+});

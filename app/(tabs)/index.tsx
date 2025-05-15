@@ -27,7 +27,7 @@ export default function HomeScreen() {
 
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.heading}>Lavanderia Aqua Clean</Text>
+            <Text style={styles.heading}>Aqua Clean Delivery</Text>
             
             <View style={styles.form}>
                 <Text style={styles.label}>Serviços Disponíveis</Text>
